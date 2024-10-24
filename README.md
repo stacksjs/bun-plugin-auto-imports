@@ -23,20 +23,20 @@ You may now use the plugin:
 ```ts
 // index.ts
 import type { AutoImportsOptions } from 'bun-plugin-auto-imports'
+import { plugin } from 'bun'
 import { autoImports } from 'bun-plugin-auto-imports'
-import { plugin } from "bun"
 
 const options: AutoImportsOptions = {
-  presets: ["solid-js"], // any unimport presets are valid
-  imports: [{ name: "z", from: "zod" }],
+  presets: ['solid-js'], // any unimport presets are valid
+  imports: [{ name: 'z', from: 'zod' }],
   dts: `./src/auto-import.d.ts`, // default is `./auto-import.d.ts`
 }
 
 plugin(autoImports(options))
 
 Bun.serve({
-	fetch: handler,
-	port: 3000,
+  fetch: handler,
+  port: 3000,
 })
 ```
 
@@ -49,14 +49,15 @@ const Body = z.object({
   msg: z.string(),
 })
 
-export const handler = async (req: Request) => {
+export async function handler(req: Request) {
   try {
     const body = await req.json()
     const data = Body.parse(body)
 
     return new Response(`Received: ${data.msg}`)
-  } catch (e) {
-    return new Response("Invalid body", { status: 400 })
+  }
+  catch (e) {
+    return new Response('Invalid body', { status: 400 })
   }
 }
 ```
