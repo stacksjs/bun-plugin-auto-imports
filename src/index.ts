@@ -1,7 +1,7 @@
 import type { PluginBuilder } from 'bun'
 import type { UnimportOptions } from 'unimport'
 
-function getLoader(path: string) {
+function getLoader(path: string): string {
   return path.endsWith('ts')
     ? 'ts'
     : path.endsWith('js')
@@ -11,7 +11,12 @@ function getLoader(path: string) {
         : 'jsx'
 }
 
-export function autoImports(options: Partial<UnimportOptions & { dts: string }>) {
+interface AutoImportsPlugin {
+  name: string
+  setup: (builder: PluginBuilder) => Promise<void>
+}
+
+export function autoImports(options: Partial<UnimportOptions & { dts: string }>): AutoImportsPlugin {
   return {
     name: 'bun-plugin-auto-imports',
 

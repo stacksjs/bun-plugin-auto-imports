@@ -1,4 +1,5 @@
 import process from 'node:process'
+import { dts } from 'bun-plugin-dtsx'
 
 console.log('Building...')
 
@@ -6,9 +7,8 @@ const result = await Bun.build({
   entrypoints: ['src/index.ts'],
   outdir: 'dist',
   target: 'bun',
-  // sourcemap: 'linked',
   // minify: true,
-  // plugins: [dts()],
+  plugins: [dts()],
 })
 
 if (!result.success) {
