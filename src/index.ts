@@ -1,4 +1,4 @@
-import type { PluginBuilder } from 'bun'
+import type { Loader, PluginBuilder } from 'bun'
 import type { UnimportOptions } from 'unimport'
 
 function getLoader(path: string): string {
@@ -36,7 +36,7 @@ export function autoImports(options: Partial<UnimportOptions & { dts: string }>)
 
         return {
           contents: transformedFileContent.code,
-          loader: getLoader(args.path),
+          loader: getLoader(args.path) as Loader,
         }
       })
     },
