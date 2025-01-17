@@ -45,16 +45,16 @@
     "typecheck": "bun tsc --noEmit"
   },
   "dependencies": {
-    "unimport": "^3.14.5"
+    "unimport": "^3.14.6"
   },
   "devDependencies": {
     "@stacksjs/eslint-config": "^3.8.1-beta.2",
-    "@types/bun": "^1.1.14",
-    "bumpp": "^9.9.2",
+    "@types/bun": "^1.1.17",
+    "bumpp": "^9.10.1",
     "bun-plugin-dtsx": "^0.21.9",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^15.4.1",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   },
   "simple-git-hooks": {
     "pre-commit": "bun lint-staged"
