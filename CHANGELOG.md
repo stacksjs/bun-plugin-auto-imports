@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.4...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.4...main)
+
+### 🩹 Fixes
+
+- Adjust AutoImportsOptions type ([4d355a1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4d355a1))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.1.3...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.3...main)
