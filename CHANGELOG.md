@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.1.3...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.3...main)
+
+### 🏡 Chore
+
+- Update renovate config ([2d5acc8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d5acc8))
+- Several minor updates ([3a593fa](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3a593fa))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.1.2...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.2...main)
