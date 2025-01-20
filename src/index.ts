@@ -16,7 +16,9 @@ interface AutoImportsPlugin {
   setup: (builder: PluginBuilder) => Promise<void>
 }
 
-export function autoImports(options: Partial<UnimportOptions & { dts: string }>): AutoImportsPlugin {
+export type AutoImportsOptions = UnimportOptions & { dts?: string }
+
+export function autoImports(options: Partial<AutoImportsOptions>): AutoImportsPlugin {
   return {
     name: 'bun-plugin-auto-imports',
 
@@ -25,7 +27,7 @@ export function autoImports(options: Partial<UnimportOptions & { dts: string }>)
       const { injectImports, generateTypeDeclarations } = createUnimport({
         ...options,
         dts: undefined,
-      } as UnimportOptions)
+      } as AutoImportsOptions)
 
       const dtsContent = await generateTypeDeclarations()
       Bun.write(options.dts ?? './auto-import.d.ts', dtsContent)
@@ -42,7 +44,5 @@ export function autoImports(options: Partial<UnimportOptions & { dts: string }>)
     },
   }
 }
-
-export type AutoImportsOptions = UnimportOptions
 
 export default autoImports
