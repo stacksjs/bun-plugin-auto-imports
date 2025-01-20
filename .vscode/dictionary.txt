@@ -12,6 +12,7 @@ composables
 degit
 deps
 destructurable
+dtsx
 eabi
 entrypoints
 gnueabihf
@@ -30,6 +31,7 @@ socio
 Solana
 stacksjs
 typecheck
+unimport
 unplugin
 unref
 upath
