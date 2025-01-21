@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.2.1...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.1...main)
+
+### 🏡 Chore
+
+- Externalize unimport ([585351b](https://github.com/stacksjs/bun-plugin-auto-imports/commit/585351b))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.2.0...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.0...main)
