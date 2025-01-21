@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.3.0...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.0...main)
+
+### 🩹 Fixes
+
+- Use relative paths ([2ec56b6](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2ec56b6))
+
+### 🏡 Chore
+
+- Adjust note ([567d26a](https://github.com/stacksjs/bun-plugin-auto-imports/commit/567d26a))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.2.2...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.2...main)
