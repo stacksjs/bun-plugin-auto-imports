@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.5...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.5...main)
+
+### 🚀 Enhancements
+
+- Add eslint support ([f431c3c](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f431c3c))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.1.4...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.4...main)

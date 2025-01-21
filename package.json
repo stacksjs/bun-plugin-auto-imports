@@ -1,7 +1,7 @@
 {
   "name": "bun-plugin-auto-imports",
   "type": "module",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "A Bun Bundler plugin that allows for auto-imports.",
   "author": "Chris Breuer <chris@ow3.org>",
   "license": "MIT",
