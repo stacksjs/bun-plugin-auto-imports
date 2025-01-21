@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.2.2...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.2...main)
+
+### 🚀 Enhancements
+
+- Add support for `dirs` option ([9faf6ba](https://github.com/stacksjs/bun-plugin-auto-imports/commit/9faf6ba))
+
+### 🏡 Chore
+
+- Update readme ([5e6a5cd](https://github.com/stacksjs/bun-plugin-auto-imports/commit/5e6a5cd))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.2.1...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.1...main)
