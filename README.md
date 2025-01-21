@@ -63,7 +63,8 @@ export async function handler(req: Request) {
 }
 ```
 
-_As a minor side note, if you are familiar with `unimport`, `AutoImportsOptions` proxies `UnimportOptions`._
+> [!NOTE]
+> If you are familiar with `unimport`, `AutoImportsOptions` proxies `UnimportOptions`.
 
 ## Testing
 
