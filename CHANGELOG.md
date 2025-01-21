@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.2.0...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.0...main)
+
+### 🏡 Chore
+
+- Slightly update structure ([3ccbaf3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3ccbaf3))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.1.5...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.5...main)
