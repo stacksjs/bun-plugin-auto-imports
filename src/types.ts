@@ -1,6 +1,15 @@
 import type { PluginBuilder } from 'bun'
 import type { UnimportOptions } from 'unimport'
 
+export interface ScanDir {
+  path: string
+  /**
+   * Whether to scan for type exports
+   * @default true
+   */
+  types?: boolean
+}
+
 export interface AutoImportsPlugin {
   name: string
   setup: (builder: PluginBuilder) => Promise<void>
@@ -28,4 +37,5 @@ export interface ESLintOptions {
 export type AutoImportsOptions = Partial<UnimportOptions> & {
   dts?: string
   eslint?: ESLintOptions
+  dirs?: (string | ScanDir)[]
 }

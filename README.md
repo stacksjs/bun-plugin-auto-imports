@@ -29,6 +29,7 @@ import { autoImports } from 'bun-plugin-auto-imports'
 const options: AutoImportsOptions = {
   presets: ['solid-js'], // any unimport presets are valid
   imports: [{ name: 'z', from: 'zod' }],
+  dirs: ['./src'],
   dts: `./src/auto-import.d.ts`, // default is `./auto-import.d.ts`
 }
 
