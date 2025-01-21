@@ -6,7 +6,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
-This Bun plugin generates dts files for your TypeScript projects.
+This Bun plugin allows for support of auto-imports in your server-side code.
 
 ## Features
 
