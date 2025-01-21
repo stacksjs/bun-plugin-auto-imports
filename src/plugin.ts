@@ -1,6 +1,7 @@
 import type { Loader, PluginBuilder } from 'bun'
 import type { AutoImportsOptions, AutoImportsPlugin, ESLintOptions } from './types'
 import { Glob } from 'bun'
+import path from 'node:path'
 import { generateESLintGlobals } from './eslint'
 
 function getLoader(path: string): string {
@@ -89,11 +90,17 @@ export function autoImports(options: Partial<AutoImportsOptions>): AutoImportsPl
         })),
       )
 
+      const dtsPath = path.resolve(options.dts ?? './auto-imports.d.ts')
+      const dtsDir = path.dirname(dtsPath)
+
       const unimport = createUnimport({
         ...options,
         imports: [
           ...(options.imports || []),
-          ...scannedImports,
+          ...scannedImports.map(imp => ({
+            ...imp,
+            from: `./${path.relative(dtsDir, imp.from).replace(/\\/g, '/')}`,
+          })),
         ],
         dts: undefined,
       } as AutoImportsOptions)
