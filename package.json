@@ -48,11 +48,11 @@
     "unimport": "^3.14.6"
   },
   "devDependencies": {
-    "@stacksjs/eslint-config": "^3.13.1-beta.2",
-    "@types/bun": "^1.1.18",
+    "@stacksjs/eslint-config": "^3.15.1-beta.4",
+    "@types/bun": "^1.2.2",
     "bumpp": "^10.0.1",
     "bun-plugin-dtsx": "^0.21.9",
-    "lint-staged": "^15.4.1",
+    "lint-staged": "^15.4.3",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.7.3"
   },
