@@ -35,14 +35,19 @@
   "files": ["LICENSE.md", "README.md", "dist"],
   "scripts": {
     "build": "bun build.ts",
+    "dev": "bun build.ts --watch",
     "lint": "bunx eslint .",
     "lint:fix": "bunx eslint . --fix",
-    "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
+    "fresh": "rm -rf node_modules/ bun.lock && bun i",
     "changelog": "bunx changelogen --output CHANGELOG.md",
     "prepublishOnly": "bun run build",
     "release": "bun run changelog && bunx bumpp package.json --all",
     "test": "bun test",
-    "typecheck": "bun tsc --noEmit"
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "typecheck": "bun tsc --noEmit",
+    "typecheck:watch": "bun tsc --noEmit --watch",
+    "clean": "rm -rf dist/ coverage/ .eslint-auto-import.json auto-imports.d.ts"
   },
   "dependencies": {
     "unimport": "^3.14.6"
@@ -60,6 +65,6 @@
     "pre-commit": "bun lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts}": "bunx eslint . --fix"
+    "*.{js,ts}": ["bunx eslint . --fix"]
   }
 }
