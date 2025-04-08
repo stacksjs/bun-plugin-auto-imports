@@ -50,7 +50,7 @@
     "clean": "rm -rf dist/ coverage/ .eslint-auto-import.json auto-imports.d.ts"
   },
   "dependencies": {
-    "unimport": "^4.1.2"
+    "unimport": "^5.0.0"
   },
   "devDependencies": {
     "@stacksjs/eslint-config": "^3.15.1-beta.4",
