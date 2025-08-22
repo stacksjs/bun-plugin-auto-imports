@@ -62,18 +62,16 @@
     "@stacksjs/logsmith": "^0.1.8",
     "@types/bun": "^1.2.9",
     "buddy-bot": "^0.8.8",
-    "bumpp": "^10.1.0",
     "bun-git-hooks": "^0.2.19",
     "bun-plugin-dtsx": "^0.21.9",
-    "changelogen": "^0.6.1",
-    "lint-staged": "^15.5.0",
-    "simple-git-hooks": "^2.12.1",
     "typescript": "^5.8.3"
   },
-  "simple-git-hooks": {
-    "pre-commit": "bun lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,ts}": ["bunx eslint . --fix"]
+  "git-hooks": {
+    "pre-commit": {
+      "staged-lint": {
+        "*.{js,ts,json,yaml,yml,md}": "bun lint:fix"
+      }
+    },
+    "commit-msg": "bunx gitlint --edit $1"
   }
 }
