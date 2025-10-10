@@ -1,0 +1,64 @@
+---
+description: General information based on the latest ./README.md content
+globs:
+---
+Update it if APIs change:
+
+# bun-plugin-auto-imports
+
+This Bun plugin allows for support of auto-imports in your server-side code.
+
+## Features
+
+- Auto-imports support for Bun
+
+## Usage
+
+```bash
+bun install -d bun-plugin-auto-imports
+```
+
+You may now use the plugin:
+
+```ts
+// index.ts
+import type { AutoImportsOptions } from 'bun-plugin-auto-imports'
+import { plugin } from 'bun'
+import { autoImports } from 'bun-plugin-auto-imports'
+
+const options: AutoImportsOptions = {
+  presets: ['solid-js'], // any unimport presets are valid
+  imports: [{ name: 'z', from: 'zod' }],
+  dirs: ['./src'],
+  dts: `./src/auto-import.d.ts`, // default is `./auto-import.d.ts`
+}
+
+plugin(autoImports(options))
+
+Bun.serve({
+  fetch: handler,
+  port: 3000,
+})
+```
+
+In your "server file," you may now use the auto-imported modules:
+
+```ts
+// server.ts
+// `z` is auto imported from zod
+const Body = z.object({
+  msg: z.string(),
+})
+
+export async function handler(req: Request) {
+  try {
+    const body = await req.json()
+    const data = Body.parse(body)
+
+    return new Response(`Received: ${data.msg}`)
+  }
+  catch (e) {
+    return new Response('Invalid body', { status: 400 })
+  }
+}
+```

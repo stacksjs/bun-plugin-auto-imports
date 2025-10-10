@@ -6,6 +6,8 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
+# bun-plugin-auto-imports
+
 This Bun plugin allows for support of auto-imports in your server-side code.
 
 ## Features
