@@ -52,7 +52,7 @@
     "clean": "rm -rf dist/ coverage/ .eslint-auto-import.json auto-imports.d.ts"
   },
   "dependencies": {
-    "unimport": "^4.1.2"
+    "unimport": "^5.6.0"
   },
   "devDependencies": {
     "@stacksjs/bumpx": "^0.1.17",
