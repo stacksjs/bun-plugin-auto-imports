@@ -12,7 +12,7 @@ describe('bun-plugin-auto-imports', () => {
 
   // Mock PluginBuilder
   const mockBuilder: Partial<PluginBuilder> = {
-    onLoad: () => {},
+    onLoad: (_constraints, _callback) => mockBuilder as PluginBuilder,
   }
 
   beforeAll(async () => {
