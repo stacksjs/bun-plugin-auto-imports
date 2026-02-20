@@ -61,16 +61,8 @@
     "unimport": "^4.1.2"
   },
   "devDependencies": {
-    "@stacksjs/bumpx": "^0.1.17",
-    "@stacksjs/clarity": "^0.3.23",
     "@stacksjs/docs": "^0.70.23",
-    "@stacksjs/gitlint": "^0.1.5",
-    "@stacksjs/logsmith": "^0.1.8",
-    "@types/bun": "^1.2.9",
-    "buddy-bot": "^0.8.9",
-    "bun-git-hooks": "^0.2.19",
-    "bun-plugin-dtsx": "^0.21.9",
-    "typescript": "^5.8.3"
+    "better-dx": "^0.2.5"
   },
   "git-hooks": {
     "pre-commit": {
