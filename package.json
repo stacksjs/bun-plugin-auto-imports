@@ -58,7 +58,7 @@
     "format:fix": "bunx --bun pickier format . --write"
   },
   "dependencies": {
-    "unimport": "^4.1.2"
+    "unimport": "^5.6.0"
   },
   "devDependencies": {
     "@stacksjs/bumpx": "^0.1.17",
