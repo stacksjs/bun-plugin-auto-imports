@@ -61,7 +61,7 @@
     "unimport": "^4.1.2"
   },
   "devDependencies": {
-    "@stacksjs/bumpx": "^0.1.17",
+    "@stacksjs/bumpx": "^0.2.4",
     "@stacksjs/clarity": "^0.3.23",
     "@stacksjs/docs": "^0.70.23",
     "@stacksjs/gitlint": "^0.1.5",
