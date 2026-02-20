@@ -78,6 +78,38 @@ export interface ESLintOptions {
 }
 
 /**
+ * Pickier globals property value type
+ */
+export type PickierGlobalsPropValue = 'readonly' | 'writable'
+
+/**
+ * Pickier configuration options
+ *
+ * Note: Pickier relies on TypeScript for type checking, so the generated .d.ts
+ * file from auto-imports is typically sufficient. These options are provided
+ * for advanced use cases.
+ */
+export interface PickierOptions {
+  /**
+   * Whether to generate Pickier configuration
+   * @default false
+   */
+  enabled?: boolean
+
+  /**
+   * Filepath to save the generated Pickier globals config
+   * @default './.pickier-auto-import.json'
+   */
+  filepath?: string
+
+  /**
+   * Value to use for globals properties
+   * @default 'readonly'
+   */
+  globalsPropValue?: PickierGlobalsPropValue
+}
+
+/**
  * Main configuration options for the auto-imports plugin
  */
 export type AutoImportsOptions = Partial<UnimportOptions> & {
@@ -89,8 +121,15 @@ export type AutoImportsOptions = Partial<UnimportOptions> & {
 
   /**
    * ESLint integration configuration
+   * @deprecated Use pickier instead - Stacks uses Pickier for linting
    */
   eslint?: ESLintOptions
+
+  /**
+   * Pickier integration configuration
+   * Note: Usually not needed - the generated .d.ts file is sufficient
+   */
+  pickier?: PickierOptions
 
   /**
    * Directories to scan for exports
