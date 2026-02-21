@@ -21,5 +21,5 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
-  "exclude": ["pickier.config.ts"]
+  "exclude": ["pickier.ts"]
 }
