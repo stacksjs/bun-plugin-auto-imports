@@ -6,7 +6,7 @@
  * and don't need to be listed here.
  */
 
-import type { InlinePreset } from 'unimport'
+import type { InlinePreset } from '../types'
 
 export const stacksjsBrowser: InlinePreset = {
   from: '@stacksjs/browser',

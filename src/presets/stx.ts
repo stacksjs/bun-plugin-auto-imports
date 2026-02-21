@@ -4,7 +4,7 @@
  * Provides auto-imports for STX reactive primitives and utilities.
  */
 
-import type { InlinePreset } from 'unimport'
+import type { InlinePreset } from '../types'
 
 export const stx: InlinePreset = {
   from: 'stx',

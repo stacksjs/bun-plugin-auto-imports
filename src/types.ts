@@ -1,5 +1,32 @@
 import type { PluginBuilder } from 'bun'
-import type { UnimportOptions } from 'unimport'
+
+/**
+ * A single import item to auto-import
+ */
+export interface ImportItem {
+  /** Module to import from */
+  from: string
+
+  /** Export name to import */
+  name: string
+
+  /** Local alias (defaults to name) */
+  as?: string
+
+  /** Whether this is a type-only import */
+  type?: boolean
+}
+
+/**
+ * An inline preset defining a set of imports from a package
+ */
+export interface InlinePreset {
+  /** Package or module to import from */
+  from: string
+
+  /** List of imports - either a string name or an object with name/alias */
+  imports: (string | { name: string, as?: string })[]
+}
 
 /**
  * Configuration for a directory to scan for exports
@@ -112,7 +139,7 @@ export interface PickierOptions {
 /**
  * Main configuration options for the auto-imports plugin
  */
-export type AutoImportsOptions = Partial<UnimportOptions> & {
+export interface AutoImportsOptions {
   /**
    * Path to generate TypeScript declaration file
    * @default './auto-imports.d.ts'
@@ -142,4 +169,14 @@ export type AutoImportsOptions = Partial<UnimportOptions> & {
    * @default false
    */
   debug?: boolean
+
+  /**
+   * Custom imports to register
+   */
+  imports?: ImportItem[]
+
+  /**
+   * Inline presets to register
+   */
+  presets?: InlinePreset[]
 }
