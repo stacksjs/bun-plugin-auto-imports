@@ -274,10 +274,20 @@ export function generateImportStatements(usedNames: Set<string>, importMap: Map<
 }
 
 /**
+ * The context returned by createAutoImportContext
+ */
+export interface AutoImportContext {
+  importMap: Map<string, ImportEntry>
+  knownNames: Set<string>
+  injectImports(code: string): { code: string }
+  generateTypeDeclarations(): string
+}
+
+/**
  * Create an auto-import context from a list of import entries.
  * Returns functions for injecting imports and generating type declarations.
  */
-export function createAutoImportContext(entries: ImportEntry[]) {
+export function createAutoImportContext(entries: ImportEntry[]): AutoImportContext {
   const importMap = new Map<string, ImportEntry>()
   for (const entry of entries) {
     const key = entry.as || entry.name
@@ -290,8 +300,8 @@ export function createAutoImportContext(entries: ImportEntry[]) {
   const knownNames = new Set(importMap.keys())
 
   return {
-    importMap,
-    knownNames,
+    importMap: importMap,
+    knownNames: knownNames,
 
     injectImports(code: string): { code: string } {
       if (knownNames.size === 0 || !code.trim()) return { code }

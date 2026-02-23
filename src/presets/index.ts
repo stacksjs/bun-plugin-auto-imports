@@ -8,11 +8,12 @@ export { stx } from './stx'
 export { stacksjsBrowser } from './stacksjs-browser'
 
 // Re-export as named collection
+import type { InlinePreset } from '../types'
 import { stx } from './stx'
 import { stacksjsBrowser } from './stacksjs-browser'
 
-export const presets = {
-  stx,
+export const presets: Record<string, InlinePreset> = {
+  stx: stx,
   '@stacksjs/browser': stacksjsBrowser,
   'stacksjs-browser': stacksjsBrowser,
 }
