@@ -2,7 +2,7 @@
 
 ## About
 
-A Bun Bundler plugin that allows for auto-imports.
+bun-plugin-auto-imports is a Bun plugin that enables auto-imports in server-side code, powered by unimport. It supports preset-based auto-imports (e.g., `solid-js`), custom named imports, and directory scanning. The plugin generates a `.d.ts` file for TypeScript support and accepts any valid `UnimportOptions` configuration.
 
 ## Linting
 
