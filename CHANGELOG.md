@@ -1,5 +1,106 @@
 # Changelog
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.1...v0.4.0)
 
+### 🧹 Chores
+
+- release v0.4.0 ([2412a7c](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2412a7c)) _(by Chris <chrisbreuer93@gmail.com>)_
+- update pantry lockfile ([0e86dc0](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e86dc0)) _(by Chris <chrisbreuer93@gmail.com>)_
+- update better-dx to ^0.2.7 ([4b87536](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4b87536)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- enrich CLAUDE.md with detailed project context from README ([02d4abc](https://github.com/stacksjs/bun-plugin-auto-imports/commit/02d4abc)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- update CLAUDE.md with project context and crosswind details ([be44db7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/be44db7)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- add proper claude code guidelines ([b35878e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b35878e)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- use pantry monorepo action instead of pantry-setup ([3fbf2e3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3fbf2e3)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([6ac0e92](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6ac0e92)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([50bb416](https://github.com/stacksjs/bun-plugin-auto-imports/commit/50bb416)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([143c900](https://github.com/stacksjs/bun-plugin-auto-imports/commit/143c900)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([31c3d9b](https://github.com/stacksjs/bun-plugin-auto-imports/commit/31c3d9b)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([b991dd2](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b991dd2)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f600fe1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f600fe1)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([d03b1b1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d03b1b1)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8caf39e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8caf39e)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([c693d94](https://github.com/stacksjs/bun-plugin-auto-imports/commit/c693d94)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([695d161](https://github.com/stacksjs/bun-plugin-auto-imports/commit/695d161)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f29108d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f29108d)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8ab1d43](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8ab1d43)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8b1b68e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8b1b68e)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([3f8de93](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3f8de93)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([12a9654](https://github.com/stacksjs/bun-plugin-auto-imports/commit/12a9654)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([f06c199](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f06c199)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([1625060](https://github.com/stacksjs/bun-plugin-auto-imports/commit/1625060)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([41855a3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/41855a3)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([2754f01](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2754f01)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f929017](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f929017)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([98959d2](https://github.com/stacksjs/bun-plugin-auto-imports/commit/98959d2)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- add clarity  and cursor rules ([166ff13](https://github.com/stacksjs/bun-plugin-auto-imports/commit/166ff13)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- update tools ([b47e6c5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b47e6c5)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- update tools ([f09ae2d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f09ae2d)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- update tools ([a232125](https://github.com/stacksjs/bun-plugin-auto-imports/commit/a232125)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- add stacksjs/docs ([508a21d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/508a21d)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- **deps**: update dependency bumpp to ^10.0.3 (#14) ([c0dcfd3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/c0dcfd3)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#14](https://github.com/stacksjs/bun-plugin-auto-imports/issues/14), [#14](https://github.com/stacksjs/bun-plugin-auto-imports/issues/14))
+- **deps**: update dependency unimport to v4 (#15) ([12b5cb4](https://github.com/stacksjs/bun-plugin-auto-imports/commit/12b5cb4)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#15](https://github.com/stacksjs/bun-plugin-auto-imports/issues/15), [#15](https://github.com/stacksjs/bun-plugin-auto-imports/issues/15))
+- enhance test case ([6c70dd7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6c70dd7)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- enhance funding ([6814ade](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6814ade)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- several minor updates ([0e909b5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e909b5)) _(by Chris <chrisbreuer93@gmail.com>)_
+- **deps**: update dependency bumpp to v10 (#16) ([88b1323](https://github.com/stacksjs/bun-plugin-auto-imports/commit/88b1323)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16), [#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16))
+
+### Contributors
+
+- _Adelino Ngomacha <adelinob335@gmail.com>_
+- _Chris <chrisbreuer93@gmail.com>_
+- _[renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot])_
+- _cab-mikee <mike.cabz32@gmail.com>_
+- _glennmichael123 <gtorregosa@gmail.com>_
+
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.1...HEAD)
+
+### 🧹 Chores
+
+- update pantry lockfile ([0e86dc0](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e86dc0)) _(by Chris <chrisbreuer93@gmail.com>)_
+- update better-dx to ^0.2.7 ([4b87536](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4b87536)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- enrich CLAUDE.md with detailed project context from README ([02d4abc](https://github.com/stacksjs/bun-plugin-auto-imports/commit/02d4abc)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- update CLAUDE.md with project context and crosswind details ([be44db7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/be44db7)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- add proper claude code guidelines ([b35878e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b35878e)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- use pantry monorepo action instead of pantry-setup ([3fbf2e3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3fbf2e3)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([6ac0e92](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6ac0e92)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([50bb416](https://github.com/stacksjs/bun-plugin-auto-imports/commit/50bb416)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([143c900](https://github.com/stacksjs/bun-plugin-auto-imports/commit/143c900)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([31c3d9b](https://github.com/stacksjs/bun-plugin-auto-imports/commit/31c3d9b)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([b991dd2](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b991dd2)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f600fe1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f600fe1)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([d03b1b1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d03b1b1)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8caf39e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8caf39e)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([c693d94](https://github.com/stacksjs/bun-plugin-auto-imports/commit/c693d94)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([695d161](https://github.com/stacksjs/bun-plugin-auto-imports/commit/695d161)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f29108d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f29108d)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8ab1d43](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8ab1d43)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([8b1b68e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8b1b68e)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([3f8de93](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3f8de93)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([12a9654](https://github.com/stacksjs/bun-plugin-auto-imports/commit/12a9654)) _(by Chris <chrisbreuer93@gmail.com>)_
+- wip ([f06c199](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f06c199)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([1625060](https://github.com/stacksjs/bun-plugin-auto-imports/commit/1625060)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([41855a3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/41855a3)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([2754f01](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2754f01)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([f929017](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f929017)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- wip ([98959d2](https://github.com/stacksjs/bun-plugin-auto-imports/commit/98959d2)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- add clarity  and cursor rules ([166ff13](https://github.com/stacksjs/bun-plugin-auto-imports/commit/166ff13)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- update tools ([b47e6c5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/b47e6c5)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- update tools ([f09ae2d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f09ae2d)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- update tools ([a232125](https://github.com/stacksjs/bun-plugin-auto-imports/commit/a232125)) _(by Adelino Ngomacha <adelinob335@gmail.com>)_
+- add stacksjs/docs ([508a21d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/508a21d)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- **deps**: update dependency bumpp to ^10.0.3 (#14) ([c0dcfd3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/c0dcfd3)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#14](https://github.com/stacksjs/bun-plugin-auto-imports/issues/14), [#14](https://github.com/stacksjs/bun-plugin-auto-imports/issues/14))
+- **deps**: update dependency unimport to v4 (#15) ([12b5cb4](https://github.com/stacksjs/bun-plugin-auto-imports/commit/12b5cb4)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#15](https://github.com/stacksjs/bun-plugin-auto-imports/issues/15), [#15](https://github.com/stacksjs/bun-plugin-auto-imports/issues/15))
+- enhance test case ([6c70dd7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6c70dd7)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- enhance funding ([6814ade](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6814ade)) _(by cab-mikee <mike.cabz32@gmail.com>)_
+- several minor updates ([0e909b5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e909b5)) _(by Chris <chrisbreuer93@gmail.com>)_
+- **deps**: update dependency bumpp to v10 (#16) ([88b1323](https://github.com/stacksjs/bun-plugin-auto-imports/commit/88b1323)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16), [#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16))
+
+### Contributors
+
+- _Adelino Ngomacha <adelinob335@gmail.com>_
+- _Chris <chrisbreuer93@gmail.com>_
+- _[renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot])_
+- _cab-mikee <mike.cabz32@gmail.com>_
+- _glennmichael123 <gtorregosa@gmail.com>_
 
 ## v0.3.0...main
 
@@ -131,4 +232,3 @@
 ### ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
-
