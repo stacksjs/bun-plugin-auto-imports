@@ -82,3 +82,27 @@ jobs:
 
       - name: Unit Test
         run: bun test
+
+  publish-commit:
+    needs: [lint, typecheck, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Pantry
+        uses: home-lang/pantry/packages/action@main
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Build
+        run: bun run build
+
+      - name: Publish Commit
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: pantry publish:commit '.'
+        env:
+          PANTRY_REGISTRY_TOKEN: ${{ secrets.PANTRY_TOKEN }}
