@@ -521,8 +521,19 @@ export async function generateRuntimeIndex(
       lines.push(`export type { ${typeExports.map(e => e.name).join(', ')} } from '${cleanPath}'`)
     }
 
+    // Default exports (typically user models / jobs / controllers) get
+    // emitted as sequential `await import()` + named export instead of the
+    // standard `export { default as X } from '...'`. Static re-exports are
+    // linked in parallel by Bun's ESM linker, which makes the second model
+    // in a barrel start evaluating before the first model's transitive
+    // `@stacksjs/validation` dep finishes — leaving `schema` in TDZ on
+    // every line after the first. Sequential dynamic imports are a true
+    // barrier and let user-model files freely call `schema.string()` /
+    // `defineModel({...})` etc. at module-eval time.
     for (const def of defaultExports) {
-      lines.push(`export { default as ${def.name} } from '${cleanPath}'`)
+      const local = `_${def.name}`
+      lines.push(`const ${local} = (await import('${cleanPath}')).default`)
+      lines.push(`export { ${local} as ${def.name} }`)
     }
   }
 
