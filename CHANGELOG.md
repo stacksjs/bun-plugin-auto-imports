@@ -1,4 +1,35 @@
 # Changelog
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.0...v0.4.1)
+
+### 🐛 Bug Fixes
+
+- emit sequential await imports for default-export models ([2d9859d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d9859d)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+### 🧹 Chores
+
+- release v0.4.1 ([3ec1a06](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3ec1a06)) _(by Chris <chrisbreuer93@gmail.com>)_
+- add release:patch/minor/major scripts ([8632b21](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8632b21)) _(by Chris <chrisbreuer93@gmail.com>)_
+- add publish-commit job with Pantry action and job dependencies ([72e07d8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/72e07d8)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+### Contributors
+
+- _Chris <chrisbreuer93@gmail.com>_
+
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.0...HEAD)
+
+### 🐛 Bug Fixes
+
+- emit sequential await imports for default-export models ([2d9859d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d9859d)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+### 🧹 Chores
+
+- add release:patch/minor/major scripts ([8632b21](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8632b21)) _(by Chris <chrisbreuer93@gmail.com>)_
+- add publish-commit job with Pantry action and job dependencies ([72e07d8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/72e07d8)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+### Contributors
+
+- _Chris <chrisbreuer93@gmail.com>_
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.1...v0.4.0)
 
 ### 🧹 Chores
