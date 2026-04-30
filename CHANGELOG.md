@@ -1,38 +1,39 @@
 # Changelog
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.0...v0.4.1)
 
-### 🐛 Bug Fixes
+## 🐛 Bug Fixes
 
 - emit sequential await imports for default-export models ([2d9859d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d9859d)) _(by Chris <chrisbreuer93@gmail.com>)_
 
-### 🧹 Chores
+## 🧹 Chores
 
 - release v0.4.1 ([3ec1a06](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3ec1a06)) _(by Chris <chrisbreuer93@gmail.com>)_
 - add release:patch/minor/major scripts ([8632b21](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8632b21)) _(by Chris <chrisbreuer93@gmail.com>)_
 - add publish-commit job with Pantry action and job dependencies ([72e07d8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/72e07d8)) _(by Chris <chrisbreuer93@gmail.com>)_
 
-### Contributors
+## Contributors
 
 - _Chris <chrisbreuer93@gmail.com>_
 
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.0...HEAD)
 
-### 🐛 Bug Fixes
+## 🐛 Bug Fixes
 
 - emit sequential await imports for default-export models ([2d9859d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d9859d)) _(by Chris <chrisbreuer93@gmail.com>)_
 
-### 🧹 Chores
+## 🧹 Chores
 
 - add release:patch/minor/major scripts ([8632b21](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8632b21)) _(by Chris <chrisbreuer93@gmail.com>)_
 - add publish-commit job with Pantry action and job dependencies ([72e07d8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/72e07d8)) _(by Chris <chrisbreuer93@gmail.com>)_
 
-### Contributors
+## Contributors
 
 - _Chris <chrisbreuer93@gmail.com>_
 
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.1...v0.4.0)
 
-### 🧹 Chores
+## 🧹 Chores
 
 - release v0.4.0 ([2412a7c](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2412a7c)) _(by Chris <chrisbreuer93@gmail.com>)_
 - update pantry lockfile ([0e86dc0](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e86dc0)) _(by Chris <chrisbreuer93@gmail.com>)_
@@ -74,7 +75,7 @@
 - several minor updates ([0e909b5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e909b5)) _(by Chris <chrisbreuer93@gmail.com>)_
 - **deps**: update dependency bumpp to v10 (#16) ([88b1323](https://github.com/stacksjs/bun-plugin-auto-imports/commit/88b1323)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16), [#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16))
 
-### Contributors
+## Contributors
 
 - _Adelino Ngomacha <adelinob335@gmail.com>_
 - _Chris <chrisbreuer93@gmail.com>_
@@ -84,7 +85,7 @@
 
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.1...HEAD)
 
-### 🧹 Chores
+## 🧹 Chores
 
 - update pantry lockfile ([0e86dc0](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e86dc0)) _(by Chris <chrisbreuer93@gmail.com>)_
 - update better-dx to ^0.2.7 ([4b87536](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4b87536)) _(by glennmichael123 <gtorregosa@gmail.com>)_
@@ -125,7 +126,7 @@
 - several minor updates ([0e909b5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/0e909b5)) _(by Chris <chrisbreuer93@gmail.com>)_
 - **deps**: update dependency bumpp to v10 (#16) ([88b1323](https://github.com/stacksjs/bun-plugin-auto-imports/commit/88b1323)) _(by [renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>](https://github.com/renovate[bot]))_ ([#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16), [#16](https://github.com/stacksjs/bun-plugin-auto-imports/issues/16))
 
-### Contributors
+## Contributors
 
 - _Adelino Ngomacha <adelinob335@gmail.com>_
 - _Chris <chrisbreuer93@gmail.com>_
@@ -137,15 +138,15 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.3.0...main)
 
-### 🩹 Fixes
+## 🩹 Fixes
 
 - Use relative paths ([2ec56b6](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2ec56b6))
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Adjust note ([567d26a](https://github.com/stacksjs/bun-plugin-auto-imports/commit/567d26a))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -153,15 +154,15 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.2...main)
 
-### 🚀 Enhancements
+## 🚀 Enhancements
 
 - Add support for `dirs` option ([9faf6ba](https://github.com/stacksjs/bun-plugin-auto-imports/commit/9faf6ba))
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Update readme ([5e6a5cd](https://github.com/stacksjs/bun-plugin-auto-imports/commit/5e6a5cd))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -169,11 +170,11 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.1...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Externalize unimport ([585351b](https://github.com/stacksjs/bun-plugin-auto-imports/commit/585351b))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -181,11 +182,11 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.2.0...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Slightly update structure ([3ccbaf3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3ccbaf3))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -193,11 +194,11 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.5...main)
 
-### 🚀 Enhancements
+## 🚀 Enhancements
 
 - Add eslint support ([f431c3c](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f431c3c))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -205,11 +206,11 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.4...main)
 
-### 🩹 Fixes
+## 🩹 Fixes
 
 - Adjust AutoImportsOptions type ([4d355a1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4d355a1))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -217,12 +218,12 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.3...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Update renovate config ([2d5acc8](https://github.com/stacksjs/bun-plugin-auto-imports/commit/2d5acc8))
 - Several minor updates ([3a593fa](https://github.com/stacksjs/bun-plugin-auto-imports/commit/3a593fa))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -230,12 +231,12 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.2...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Fix type error ([d7f4767](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d7f4767))
 - Update dtsx ([c777cfd](https://github.com/stacksjs/bun-plugin-auto-imports/commit/c777cfd))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -243,12 +244,12 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.1.1...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Update deps ([06d2572](https://github.com/stacksjs/bun-plugin-auto-imports/commit/06d2572))
 - Minor adjustments ([d78806a](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d78806a))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
 
@@ -256,10 +257,10 @@
 
 [compare changes](https://github.com/stacksjs/bun-plugin-dts-auto/compare/v0.1.0...main)
 
-### 🏡 Chore
+## 🏡 Chore
 
 - Use `dtsx` to generate dts ([d791c84](https://github.com/stacksjs/bun-plugin-dts-auto/commit/d791c84))
 
-### ❤️ Contributors
+## ❤️ Contributors
 
 - Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
