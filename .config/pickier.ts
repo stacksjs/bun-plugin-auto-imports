@@ -56,6 +56,7 @@ const config: PickierConfig = {
     'markdown/no-duplicate-heading': 'off',
     'markdown/single-trailing-newline': 'off',
     'markdown/link-image-style': 'off',
+    'markdown/no-reversed-links': 'off',
   },
 }
 
