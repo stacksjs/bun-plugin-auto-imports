@@ -71,29 +71,39 @@ import type { AutoImportsOptions } from 'bun-plugin-auto-imports'
 
 interface AutoImportsOptions extends Partial<UnimportOptions> {
   /**
-   * Path to generate TypeScript declaration file
-   * @default './auto-imports.d.ts'
+
+   _ Path to generate TypeScript declaration file
+   _ @default './auto-imports.d.ts'
+
    */
   dts?: string | false
 
   /**
-   * ESLint integration configuration
-   */
+
+   _ ESLint integration configuration
+
+   _/
   eslint?: ESLintOptions
 
   /**
-   * Pickier integration configuration
-   */
+
+   _ Pickier integration configuration
+
+   _/
   pickier?: PickierOptions
 
   /**
-   * Directories to scan for exports
-   */
+
+   _ Directories to scan for exports
+
+   _/
   dirs?: (string | ScanDir)[]
 
   /**
-   * Enable debug logging
-   * @default false
+
+   _ Enable debug logging
+   _ @default false
+
    */
   debug?: boolean
 }
@@ -106,25 +116,33 @@ Configuration for directory scanning.
 ```typescript
 interface ScanDir {
   /**
-   * Path to the directory to scan
-   */
+
+   _ Path to the directory to scan
+
+   _/
   path: string
 
   /**
-   * Whether to scan for type exports
-   * @default true
+
+   _ Whether to scan for type exports
+   _ @default true
+
    */
   types?: boolean
 
   /**
-   * File patterns to include
-   * @default ['**/*.{ts,tsx,js,jsx}']
-   */
+
+   _ File patterns to include
+   _ @default ['**/_.{ts,tsx,js,jsx}']
+
+   _/
   include?: string[]
 
   /**
-   * File patterns to exclude
-   * @default ['**/*.d.ts', '**/node_modules/**']
+
+   _ File patterns to exclude
+   _ @default ['**/*.d.ts', '**/node_modules/**']
+
    */
   exclude?: string[]
 }
@@ -137,20 +155,26 @@ ESLint configuration options.
 ```typescript
 interface ESLintOptions {
   /**
-   * Enable ESLint configuration generation
-   * @default false
+
+   _ Enable ESLint configuration generation
+   _ @default false
+
    */
   enabled?: boolean
 
   /**
-   * Filepath for ESLint globals config
-   * @default './.eslint-auto-import.json'
+
+   _ Filepath for ESLint globals config
+   _ @default './.eslint-auto-import.json'
+
    */
   filepath?: string
 
   /**
-   * Value for globals properties
-   * @default true
+
+   _ Value for globals properties
+   _ @default true
+
    */
   globalsPropValue?: ESLintGlobalsPropValue
 }
@@ -170,20 +194,26 @@ Pickier configuration options.
 ```typescript
 interface PickierOptions {
   /**
-   * Enable Pickier configuration generation
-   * @default false
+
+   _ Enable Pickier configuration generation
+   _ @default false
+
    */
   enabled?: boolean
 
   /**
-   * Filepath for Pickier globals config
-   * @default './.pickier-auto-import.json'
+
+   _ Filepath for Pickier globals config
+   _ @default './.pickier-auto-import.json'
+
    */
   filepath?: string
 
   /**
-   * Value for globals properties
-   * @default 'readonly'
+
+   _ Value for globals properties
+   _ @default 'readonly'
+
    */
   globalsPropValue?: PickierGlobalsPropValue
 }
@@ -209,28 +239,38 @@ Options inherited from unimport:
 ```typescript
 interface UnimportOptions {
   /**
-   * Presets to use
-   */
+
+   _ Presets to use
+
+   _/
   presets?: (string | Preset)[]
 
   /**
-   * Custom imports
-   */
+
+   _ Custom imports
+
+   _/
   imports?: Import[]
 
   /**
-   * Directories to scan
-   */
+
+   _ Directories to scan
+
+   _/
   dirs?: (string | ScanDir)[]
 
   /**
-   * Path for TypeScript declarations
-   */
+
+   _ Path for TypeScript declarations
+
+   _/
   dts?: string | false
 
   /**
-   * Additional options...
-   */
+
+   _ Additional options...
+
+   _/
 }
 ```
 
@@ -241,23 +281,31 @@ Import definition:
 ```typescript
 interface Import {
   /**
-   * Name of the export to import
-   */
+
+   _ Name of the export to import
+
+   _/
   name: string
 
   /**
-   * Local name (alias)
-   */
+
+   _ Local name (alias)
+
+   _/
   as?: string
 
   /**
-   * Package or path to import from
-   */
+
+   _ Package or path to import from
+
+   _/
   from: string
 
   /**
-   * Whether this is a type import
-   */
+
+   _ Whether this is a type import
+
+   _/
   type?: boolean
 }
 ```
@@ -297,7 +345,7 @@ const options: AutoImportsOptions = {
     {
       path: './src/composables',
       types: true,
-      exclude: ['**/*.test.ts']
+      exclude: ['**/_.test.ts']
     }
   ],
 
@@ -336,7 +384,7 @@ The plugin hooks into Bun's file loader:
 
 ```typescript
 // What the plugin does internally
-builder.onLoad({ filter: /.*/ }, async (args) => {
+builder.onLoad({ filter: /._/ }, async (args) => {
   const content = await Bun.file(args.path).text()
   const transformed = await injectImports(content)
 

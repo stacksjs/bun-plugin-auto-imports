@@ -32,5 +32,3 @@ features:
   - title: "Bun Native"
     details: "First-class support for Bun's plugin system and loader API."
 ---
-
-<Home />
