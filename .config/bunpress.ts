@@ -1,7 +1,7 @@
-import type { BunPressConfig } from 'bunpress'
+import type { BunPressConfig } from '@stacksjs/bunpress'
 
 export default {
-  name: 'bun-plugin-auto-imports',
+  title: 'bun-plugin-auto-imports',
   description: 'Auto imports support for Bun with presets, custom imports, and TypeScript declarations',
   themeConfig: {
     nav: [
