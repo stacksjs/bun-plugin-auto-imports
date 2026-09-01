@@ -1,5 +1,56 @@
 # Changelog
 
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.1...v0.4.2)
+
+## 🐛 Bug Fixes
+
+- **scan**: sort scanned files so the generated barrel is deterministic ([e86485e](https://github.com/stacksjs/bun-plugin-auto-imports/commit/e86485e)) _(by Chris <chrisbreuer93@gmail.com>)_
+- **docs**: use the config keys bunpress actually has ([82511e9](https://github.com/stacksjs/bun-plugin-auto-imports/commit/82511e9)) _(by Chris <chrisbreuer93@gmail.com>)_
+- **scripts**: stop double-generating CHANGELOG on release ([8344c8f](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8344c8f)) _(by Glenn Michael Torregosa <gtorregosa@gmail.com>)_
+- **changelog**: demote h3 sections to h2 ([be39840](https://github.com/stacksjs/bun-plugin-auto-imports/commit/be39840)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- add setup-bun to publish-commit job ([34b9b31](https://github.com/stacksjs/bun-plugin-auto-imports/commit/34b9b31)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- emit sequential await imports for default-export models ([5182897](https://github.com/stacksjs/bun-plugin-auto-imports/commit/5182897)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+## 📚 Documentation
+
+- link the community as stacksjs.com/discord ([ec19fc1](https://github.com/stacksjs/bun-plugin-auto-imports/commit/ec19fc1)) _(by Chris <chrisbreuer93@gmail.com>)_
+- expand reference.md; fix gitlint pkg path ([d270625](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d270625)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+
+## 🤖 Continuous Integration
+
+- disable markdown/no-reversed-links (false positives in code blocks) ([40d6945](https://github.com/stacksjs/bun-plugin-auto-imports/commit/40d6945)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- drop redundant setup-bun (pantry installs bun via deps.yaml) ([4b99798](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4b99798)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+
+## 🧹 Chores
+
+- release v0.4.2 ([21f58ee](https://github.com/stacksjs/bun-plugin-auto-imports/commit/21f58ee)) _(by Chris <chrisbreuer93@gmail.com>)_
+- upgrade to TypeScript 7 ([7502961](https://github.com/stacksjs/bun-plugin-auto-imports/commit/7502961)) _(by Chris <chrisbreuer93@gmail.com>)_
+- **deps**: refresh bun.lock to pick up pickier 0.1.37 ([81f0173](https://github.com/stacksjs/bun-plugin-auto-imports/commit/81f0173)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **deps**: refresh bun.lock to pick up pickier 0.1.35 ([09235f0](https://github.com/stacksjs/bun-plugin-auto-imports/commit/09235f0)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **deps**: refresh bun.lock to pick up pickier 0.1.33 ([335d411](https://github.com/stacksjs/bun-plugin-auto-imports/commit/335d411)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **deps**: refresh bun.lock to pick up @stacksjs/logsmith 0.2.3 ([8356212](https://github.com/stacksjs/bun-plugin-auto-imports/commit/8356212)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **deps**: refresh bun.lock to pick up buddy-bot 0.9.20 ([fedcd71](https://github.com/stacksjs/bun-plugin-auto-imports/commit/fedcd71)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **deps**: bump better-dx to ^0.2.15 ([f7620b7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/f7620b7)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- **ci**: bump actions/checkout to v6, actions/cache to v5 ([7af5913](https://github.com/stacksjs/bun-plugin-auto-imports/commit/7af5913)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- refresh bun.lock and apply pickier --fix ([13e415d](https://github.com/stacksjs/bun-plugin-auto-imports/commit/13e415d)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- refresh bun.lock ([4268db5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4268db5)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- fresh install to pick up dtsx 0.9.14 and bunfig 0.15.9 ([418f83f](https://github.com/stacksjs/bun-plugin-auto-imports/commit/418f83f)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- release v0.4.1 ([37aedb4](https://github.com/stacksjs/bun-plugin-auto-imports/commit/37aedb4)) _(by Chris <chrisbreuer93@gmail.com>)_
+- add release:patch/minor/major scripts ([00fb6f7](https://github.com/stacksjs/bun-plugin-auto-imports/commit/00fb6f7)) _(by Chris <chrisbreuer93@gmail.com>)_
+- fresh install to pick up pickier 0.1.21 ([d97c0ed](https://github.com/stacksjs/bun-plugin-auto-imports/commit/d97c0ed)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- include md in pickier lint extensions ([9b2bdd3](https://github.com/stacksjs/bun-plugin-auto-imports/commit/9b2bdd3)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+- repo cleanup and modernization ([fd30d3a](https://github.com/stacksjs/bun-plugin-auto-imports/commit/fd30d3a)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+
+## ⏪ Reverts
+
+- keep staged-lint kebab + bunx gitlint shorthand ([7cf5050](https://github.com/stacksjs/bun-plugin-auto-imports/commit/7cf5050)) _(by glennmichael123 <gtorregosa@gmail.com>)_
+
+## Contributors
+
+- _Chris <chrisbreuer93@gmail.com>_
+- _Glenn Michael Torregosa <gtorregosa@gmail.com>_
+- _glennmichael123 <gtorregosa@gmail.com>_
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.0...v0.4.1)
 
 ## 🐛 Bug Fixes
