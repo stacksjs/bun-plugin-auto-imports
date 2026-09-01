@@ -385,12 +385,33 @@ async function scanDirExportsDetailed(dir: string, options?: { types?: boolean }
   try {
     const glob = new Glob('**/*.{ts,tsx,js,jsx}')
 
+    /*
+     * Collected and SORTED before anything is read.
+     *
+     * `glob.scan` yields in filesystem order, and filesystems disagree — macOS
+     * APFS and Linux ext4 return a directory's children differently. The
+     * exports accumulate in that order and `exportsByFile` is insertion
+     * ordered, so the generated barrel came out with its lines in a different
+     * order on a developer's machine than in CI.
+     *
+     * Same exports either way, so nothing was broken at runtime — but the file
+     * is COMMITTED by consumers (Stacks commits `auto-imports/functions.ts`),
+     * which makes a regeneration on another machine look like a change, two
+     * developers fight over the file, and a freshness check impossible to
+     * write. stacksjs/stacks#2408.
+     */
+    const files: string[] = []
     for await (const file of glob.scan({
       cwd: dir,
       absolute: true,
       onlyFiles: true,
       followSymlinks: false,
     })) {
+      files.push(file)
+    }
+    files.sort()
+
+    for (const file of files) {
       try {
         if (file.includes('node_modules') || file.endsWith('.d.ts')) {
           continue

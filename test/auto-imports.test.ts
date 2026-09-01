@@ -10,6 +10,7 @@ import {
   generateImportStatements,
   removeAlreadyImported,
   removeLocallyDefined,
+  generateRuntimeIndex,
   stripLiterals,
 } from '../src'
 
@@ -1312,5 +1313,67 @@ describe('Performance', () => {
     expect(result.code).toContain('import42')
     expect(result.code).toContain('import99')
     expect(elapsed).toBeLessThan(50)
+  })
+})
+
+/**
+ * The generated barrel must be a function of the source, not of the machine.
+ *
+ * `glob.scan` yields in filesystem order and filesystems disagree — macOS APFS
+ * and Linux ext4 return a directory's children differently — so the emitted
+ * lines came out in a different order depending on where generation ran. Same
+ * exports either way, so nothing broke at runtime; but consumers COMMIT this
+ * file (Stacks commits `auto-imports/functions.ts`), which made a regeneration
+ * on another machine look like a change, gave two developers a file to fight
+ * over, and made a staleness check impossible to write.
+ *
+ * stacksjs/stacks#2408.
+ *
+ * An honest limit, stated because it would otherwise be assumed away: on a
+ * filesystem that already returns entries in order — macOS APFS keeps a sorted
+ * index — these assertions hold whether or not the sort exists. Removing
+ * `files.sort()` was measured to keep them green here. Their value is on the
+ * filesystems that do NOT, which is where the problem was observed: CI (Linux)
+ * reported `auto-imports/functions.ts` as differing from the committed copy
+ * generated on macOS, with identical exports.
+ *
+ * So this pins the CONTRACT rather than reproducing the fault. Reproducing it
+ * needs a filesystem that returns unsorted entries, which a unit test cannot
+ * conjure.
+ */
+describe('generateRuntimeIndex ordering', () => {
+  const dir = join(import.meta.dir, 'tmp-ordering')
+  // Output OUTSIDE the scanned directory: written inside it, the next run
+  // scans its own output and every export appears twice.
+  const out = join(import.meta.dir, 'tmp-ordering-index.ts')
+
+  beforeAll(async () => {
+    await mkdir(dir, { recursive: true })
+    // Deliberately created in an order that is not alphabetical, so a scan
+    // that preserved creation/filesystem order would be visibly different.
+    await writeFile(join(dir, 'zebra.ts'), 'export function zebra(): void {}\n')
+    await writeFile(join(dir, 'alpha.ts'), 'export function alpha(): void {}\n')
+    await writeFile(join(dir, 'middle.ts'), 'export function middle(): void {}\n')
+  })
+
+  afterAll(async () => {
+    await rm(dir, { recursive: true, force: true })
+    await rm(out, { force: true })
+  })
+
+  it('emits files in sorted order, not the order the filesystem returns', async () => {
+    const { content } = await generateRuntimeIndex([dir], out)
+
+    const order = ['alpha', 'middle', 'zebra'].map(name => content.indexOf(`/${name}'`))
+
+    expect(order.every(index => index !== -1)).toBe(true)
+    expect(order).toEqual([...order].sort((a, b) => a - b))
+  })
+
+  it('produces identical content on repeated runs', async () => {
+    const first = await generateRuntimeIndex([dir], out)
+    const second = await generateRuntimeIndex([dir], out)
+
+    expect(second.content).toBe(first.content)
   })
 })
