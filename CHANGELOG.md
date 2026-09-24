@@ -1,5 +1,19 @@
 # Changelog
 
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.2...v0.4.3)
+
+## 🐛 Bug Fixes
+
+- **scan**: only skip node_modules below the scanned directory ([1431210](https://github.com/stacksjs/bun-plugin-auto-imports/commit/1431210)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+## 🧹 Chores
+
+- release v0.4.3 ([48156ee](https://github.com/stacksjs/bun-plugin-auto-imports/commit/48156ee)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+## Contributors
+
+- _Chris <chrisbreuer93@gmail.com>_
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.1...v0.4.2)
 
 ## 🐛 Bug Fixes
