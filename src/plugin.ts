@@ -413,7 +413,12 @@ async function scanDirExportsDetailed(dir: string, options?: { types?: boolean }
 
     for (const file of files) {
       try {
-        if (file.includes('node_modules') || file.endsWith('.d.ts')) {
+        // `node_modules` BELOW the scanned directory is skipped - a vendored
+        // dependency is not the caller's code. The directory itself may sit in
+        // one: an app consuming a framework as a package points the scan at
+        // `node_modules/<pkg>/functions`, and testing the absolute path threw
+        // away every file in it, so the barrel came out empty with no error.
+        if (path.relative(dir, file).split(path.sep).includes('node_modules') || file.endsWith('.d.ts')) {
           continue
         }
 

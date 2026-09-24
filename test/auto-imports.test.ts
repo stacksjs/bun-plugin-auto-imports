@@ -1377,3 +1377,33 @@ describe('generateRuntimeIndex ordering', () => {
     expect(second.content).toBe(first.content)
   })
 })
+
+describe('generateRuntimeIndex inside node_modules', () => {
+  // A framework's packaged defaults live at node_modules/<pkg>/functions, and
+  // an app that consumes the framework as packages scans exactly that path.
+  const root = join(import.meta.dir, 'tmp-node-modules', 'node_modules', 'some-framework', 'functions')
+  const out = join(import.meta.dir, 'tmp-node-modules-index.ts')
+
+  beforeAll(async () => {
+    await mkdir(join(root, 'node_modules', 'dep'), { recursive: true })
+    await writeFile(join(root, 'api.ts'), 'export function useApi(): void {}\n')
+    await writeFile(join(root, 'node_modules', 'dep', 'index.ts'), 'export function vendored(): void {}\n')
+  })
+
+  afterAll(async () => {
+    await rm(join(import.meta.dir, 'tmp-node-modules'), { recursive: true, force: true })
+    await rm(out, { force: true })
+  })
+
+  it('scans a directory that is itself inside node_modules', async () => {
+    const { content } = await generateRuntimeIndex([root], out)
+
+    expect(content).toContain('useApi')
+  })
+
+  it('still skips node_modules below the scanned directory', async () => {
+    const { content } = await generateRuntimeIndex([root], out)
+
+    expect(content).not.toContain('vendored')
+  })
+})
