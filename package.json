@@ -60,8 +60,8 @@
     "format:fix": "bunx --bun pickier . --format --write"
   },
   "devDependencies": {
-    "@stacksjs/bunpress": "^0.2.11",
-    "better-dx": "^0.2.15"
+    "@stacksjs/bunpress": "^0.2.18",
+    "better-dx": "^0.2.37"
   },
   "git-hooks": {
     "pre-commit": {
