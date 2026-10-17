@@ -19,6 +19,7 @@ export type {
   ESLintGlobalsPropValue,
   ESLintOptions,
   ImportItem,
+  ImportPathOptions,
   InlinePreset,
   PickierGlobalsPropValue,
   PickierOptions,

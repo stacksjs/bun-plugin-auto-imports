@@ -1,5 +1,5 @@
 import type { Loader, PluginBuilder } from 'bun'
-import type { AutoImportsOptions, AutoImportsPlugin, ESLintOptions, ImportItem, InlinePreset, ScanDir } from './types'
+import type { AutoImportsOptions, AutoImportsPlugin, ESLintOptions, ImportItem, ImportPathOptions, InlinePreset, ScanDir } from './types'
 import { Glob } from 'bun'
 import path from 'node:path'
 import { generateESLintGlobals } from './eslint'
@@ -508,6 +508,7 @@ async function scanDirExports(dir: string): Promise<string[]> {
 export async function generateRuntimeIndex(
   dirs: (string | ScanDir)[],
   outputPath: string,
+  options: ImportPathOptions = {},
 ): Promise<{ exports: ExportInfo[], content: string }> {
   const allExports: ExportInfo[] = []
 
@@ -533,7 +534,7 @@ export async function generateRuntimeIndex(
     const relativePath = path.relative(path.dirname(outputPath), file).replace(/\\/g, '/')
     const importPath = relativePath.startsWith('.') ? relativePath : `./${relativePath}`
     // Remove .ts extension for imports
-    const cleanPath = importPath.replace(/\.tsx?$/, '')
+    const cleanPath = options.moduleSpecifier?.(file, outputPath) ?? importPath.replace(/\.tsx?$/, '')
 
     const valueExports = exports.filter(e => !e.isType && !e.isDefault)
     const typeExports = exports.filter(e => e.isType)
@@ -576,6 +577,7 @@ export async function generateGlobalsScript(
   dirs: (string | ScanDir)[],
   outputPath: string,
   indexPath: string,
+  options: ImportPathOptions = {},
 ): Promise<string> {
   const allExports: ExportInfo[] = []
 
@@ -591,7 +593,7 @@ export async function generateGlobalsScript(
 
   const relativePath = path.relative(path.dirname(outputPath), indexPath).replace(/\\/g, '/')
   const importPath = relativePath.startsWith('.') ? relativePath : `./${relativePath}`
-  const cleanPath = importPath.replace(/\.tsx?$/, '')
+  const cleanPath = options.moduleSpecifier?.(indexPath, outputPath) ?? importPath.replace(/\.tsx?$/, '')
 
   const lines: string[] = [
     GENERATED_COMMENT,
@@ -741,7 +743,7 @@ export function autoImports(options: Partial<AutoImportsOptions>): AutoImportsPl
               const relativePath = `./${path.relative(dtsDir, exp.file).replace(/\\/g, '/').replace(/\.tsx?$/, '')}`
               allEntries.push({
                 name: exp.name,
-                from: relativePath,
+                from: options.moduleSpecifier?.(exp.file, dtsPath) ?? relativePath,
                 type: exp.isType,
               })
             }

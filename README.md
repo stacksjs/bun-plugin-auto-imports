@@ -68,6 +68,31 @@ export async function handler(req: Request) {
 > [!NOTE]
 > If you are familiar with `unimport`, `AutoImportsOptions` proxies `UnimportOptions`.
 
+## Stable imports from packaged sources
+
+Use `moduleSpecifier(filePath, importerPath)` when scanned files belong to a
+published package. Return its public package specifier, including the source
+extension when required by its exports. Return `undefined` for ordinary local
+files to keep relative imports.
+
+```ts
+import { relative, sep } from 'node:path'
+import { generateRuntimeIndex } from 'bun-plugin-auto-imports'
+
+await generateRuntimeIndex([defaultsDir], outputPath, {
+  moduleSpecifier(filePath) {
+    const suffix = relative(defaultsDir, filePath)
+    if (suffix.startsWith(`..${sep}`) || suffix === '..') return undefined
+    return `@example/defaults/${suffix.split(sep).join('/')}`
+  },
+})
+```
+
+The same option is available on `autoImports()` for runtime imports and generated
+declarations, and as the fourth argument to `generateGlobalsScript()`. This keeps
+generated package imports stable when the consumer directory or install layout
+changes. The package must export every returned specifier.
+
 ## Testing
 
 ```bash

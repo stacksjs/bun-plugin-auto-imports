@@ -70,7 +70,7 @@
       },
       "autoRestage": true
     },
-    "commit-msg": "bunx gitlint --edit .git/COMMIT_EDITMSG"
+    "commit-msg": "bunx gitlint --edit \"$1\""
   },
   "overrides": {
     "typescript": "^7.0.2"

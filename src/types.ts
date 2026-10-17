@@ -139,7 +139,12 @@ export interface PickierOptions {
 /**
  * Main configuration options for the auto-imports plugin
  */
-export interface AutoImportsOptions {
+export interface ImportPathOptions {
+  /** Resolve a source file to a stable module specifier; undefined keeps relative imports. */
+  moduleSpecifier?: (filePath: string, importerPath: string) => string | undefined
+}
+
+export interface AutoImportsOptions extends ImportPathOptions {
   /**
    * Path to generate TypeScript declaration file
    * @default './auto-imports.d.ts'
