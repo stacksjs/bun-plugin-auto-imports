@@ -1,5 +1,21 @@
 # Changelog
 
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.3...v0.4.4)
+
+## 🐛 Bug Fixes
+
+- support stable package specifiers in generated imports ([7e7dd2b](https://github.com/stacksjs/bun-plugin-auto-imports/commit/7e7dd2b)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+## 🧹 Chores
+
+- release v0.4.4 ([79bec2c](https://github.com/stacksjs/bun-plugin-auto-imports/commit/79bec2c)) _(by Chris <chrisbreuer93@gmail.com>)_
+- run bun-git-hooks and @stacksjs/logsmith, not the unrelated npm 'git-hooks' and 'logsmith' ([6e4eec2](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6e4eec2)) _(by Chris <chrisbreuer93@gmail.com>)_
+- release through @stacksjs/bumpx, not the unrelated npm 'bumpx' ([6cdc603](https://github.com/stacksjs/bun-plugin-auto-imports/commit/6cdc603)) _(by Chris <chrisbreuer93@gmail.com>)_
+
+## Contributors
+
+- _Chris <chrisbreuer93@gmail.com>_
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.2...v0.4.3)
 
 ## 🐛 Bug Fixes
