@@ -1,5 +1,19 @@
 # Changelog
 
+[Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.4...v0.4.5)
+
+## 🐛 Bug Fixes
+
+- resolve generated export collisions consistently ([a2b2da5](https://github.com/stacksjs/bun-plugin-auto-imports/commit/a2b2da5)) _(by Chris Breuer <chris@stacksjs.com>)_
+
+## 🧹 Chores
+
+- release v0.4.5 ([4f3ef1f](https://github.com/stacksjs/bun-plugin-auto-imports/commit/4f3ef1f)) _(by Chris Breuer <chris@stacksjs.com>)_
+
+## Contributors
+
+- _Chris Breuer <chris@stacksjs.com>_
+
 [Compare changes](https://github.com/stacksjs/bun-plugin-auto-imports/compare/v0.4.3...v0.4.4)
 
 ## 🐛 Bug Fixes
