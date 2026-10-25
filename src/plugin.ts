@@ -26,6 +26,16 @@ export interface ExportInfo {
   isDefault: boolean
 }
 
+/** Keep the same first-registration precedence as the auto-import context. */
+function firstRegisteredExports<T extends ExportInfo>(entries: T[]): T[] {
+  const seen = new Set<string>()
+  return entries.filter((entry) => {
+    if (seen.has(entry.name)) return false
+    seen.add(entry.name)
+    return true
+  })
+}
+
 // ─── Core Auto-Import Engine ────────────────────────────────────────────────
 
 interface ImportEntry {
@@ -519,9 +529,11 @@ export async function generateRuntimeIndex(
     allExports.push(...exports)
   }
 
+  const selectedExports = firstRegisteredExports(allExports)
+
   // Group exports by file
   const exportsByFile = new Map<string, ExportInfo[]>()
-  for (const exp of allExports) {
+  for (const exp of selectedExports) {
     const existing = exportsByFile.get(exp.file) || []
     existing.push(exp)
     exportsByFile.set(exp.file, existing)
@@ -529,6 +541,17 @@ export async function generateRuntimeIndex(
 
   // Generate import/export statements
   const lines: string[] = [GENERATED_COMMENT]
+  const owners = new Map(selectedExports.map(exp => [exp.name, exp]))
+  const noted = new Set<string>()
+  for (const exp of allExports) {
+    const owner = owners.get(exp.name)!
+    const key = `${exp.name}\0${exp.file}`
+    if (exp.file === owner.file || noted.has(key)) continue
+    noted.add(key)
+    const skipped = path.relative(path.dirname(outputPath), exp.file).replace(/\\/g, '/')
+    const selected = path.relative(path.dirname(outputPath), owner.file).replace(/\\/g, '/')
+    lines.push(`// Skipped ${JSON.stringify(exp.name)} from ${JSON.stringify(skipped)}; first registered in ${JSON.stringify(selected)}.`)
+  }
 
   for (const [file, exports] of exportsByFile) {
     const relativePath = path.relative(path.dirname(outputPath), file).replace(/\\/g, '/')
@@ -567,7 +590,7 @@ export async function generateRuntimeIndex(
   const content = `${lines.join('\n')}\n`
   await Bun.write(outputPath, content)
 
-  return { exports: allExports, content }
+  return { exports: selectedExports, content }
 }
 
 /**
@@ -589,7 +612,7 @@ export async function generateGlobalsScript(
   }
 
   // Only include value exports (not types) for global injection
-  const valueExports = allExports.filter(e => !e.isType)
+  const valueExports = firstRegisteredExports(allExports).filter(e => !e.isType)
 
   const relativePath = path.relative(path.dirname(outputPath), indexPath).replace(/\\/g, '/')
   const importPath = relativePath.startsWith('.') ? relativePath : `./${relativePath}`
@@ -642,7 +665,7 @@ export async function generateGlobalTypes(
 
   // Group by import source
   const bySource = new Map<string, typeof allExports>()
-  for (const exp of allExports) {
+  for (const exp of firstRegisteredExports(allExports)) {
     const existing = bySource.get(exp.importFrom) || []
     existing.push(exp)
     bySource.set(exp.importFrom, existing)
@@ -671,7 +694,7 @@ export async function generateGlobalTypes(
   // Add value exports as const declarations
   for (const [importFrom, exports] of bySource) {
     const alias = `_${importFrom.replace(/[^a-zA-Z0-9]/g, '_')}`
-    const valueExports = exports.filter(e => !e.isType && !e.isDefault)
+    const valueExports = exports.filter(e => !e.isType)
 
     for (const exp of valueExports) {
       lines.push(`  const ${exp.name}: typeof ${alias}.${exp.name}`)

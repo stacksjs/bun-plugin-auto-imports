@@ -93,6 +93,15 @@ declarations, and as the fourth argument to `generateGlobalsScript()`. This keep
 generated package imports stable when the consumer directory or install layout
 changes. The package must export every returned specifier.
 
+### Export name collisions
+
+Directory scans use the caller's directory order and sorted file paths. The first
+registration of an exported name wins, matching auto-import injection. Runtime
+indexes, their returned export metadata, globals scripts and global declarations
+use that same selection. Repeated overload signatures and re-exports do not emit
+duplicate names. Import a module explicitly when helpers in different modules
+share a name but have different meanings.
+
 ## Testing
 
 ```bash
